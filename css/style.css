@@ -1,0 +1,47 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Yusei Magic', sans-serif;
+  font-size: 18px;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  background-color: #a1e9c3;
+  height: 100vh;
+}
+
+main {
+  width: 70%;
+  margin: 0 auto;
+  margin-top: 10px;
+  background-color: white;
+  border: 20px solid #21576a;
+}
+
+.logo {
+  text-align: center;
+}
+
+.todo-list ul li,
+.del-todo ul li {
+  padding: 20px;
+  border-bottom: 1px solid black;
+}
+
+h2 {
+  margin: 50px 22px;
+}
+
+.todo-list ul li i,
+.del-todo ul li i {
+  float: right;
+  margin-left: 16px;
+}
