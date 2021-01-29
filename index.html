@@ -15,7 +15,7 @@
 
   <div id="root" class="container">
 
-
+    <!-- Inizio header -->
     <header>
       <div class="logo">
 
@@ -23,34 +23,45 @@
 
       </div>
     </header>
+    <!-- Fine header -->
 
-
-
-
+    <!-- Inizio main -->
     <main>
 
-      <div class="todo-list">
+      <!-- Prima parte : inserire una nuova cosa da fare -->
+      <div class="new-todo">
 
-        <ul>
-          <li v-for = '(todo,index) in list'>{{(index+1)  + ') ' + todo}} <i class="fas fa-times" @click = 'deleteTodo(index)'></i></li>
-        </ul>
+        <input type="text" name="" value="" placeholder="Inserisci una nuova cosa da fare.." v-model="newTodo" @keyup.enter="addTodo">
+        <button type="button" name="button" class="mybtn" @click="addTodo">Inserisci</button>
 
       </div>
+      <!-- Fine prima parte -->
 
+      <!-- Seconda parte : lista cose da fare -->
+      <div class="todo-list">
 
+        <ul v-if = 'list.length > 0'>
+          <li v-for = '(todo,index) in list'>{{(index+1)  + ') ' + todo}} <i class="fas fa-times" @click = 'deleteTodo(index)'></i></li>
+        </ul>
+        <h2 v-else>La lista delle cose da fare è vuota</h3>
 
+      </div>
+      <!-- Fine seconda parte -->
 
+      <!-- Terza parte : lista elementi cancellati -->
       <div class="del-todo">
 
-        <h2>Lista elementi eliminati <i class="fas fa-trash-alt" @click='dellAll(index)'></i></h2>
+        <h2>Lista elementi cancellati <i class="fas fa-trash-alt" @click="delAll"></i></h2>
 
         <ul>
           <li v-for = '(todo,index) in delList'>{{(index+1) + ') ' + todo}} <i class="fas fa-times" @click='delForever(index)'></i><i class="fas fa-trash-restore" @click = 'restoreTodo(index)'></i></li>
         </ul>
 
       </div>
+      <!-- Fine terza parte -->
 
     </main>
+    <!-- Fine main -->
 
   </div>
 

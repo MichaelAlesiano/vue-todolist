@@ -13,6 +13,10 @@ ul {
   list-style: none;
 }
 
+i {
+  cursor: pointer;
+}
+
 .container {
   background-color: #a1e9c3;
   height: 100vh;
@@ -28,6 +32,29 @@ main {
 
 .logo {
   text-align: center;
+}
+
+.new-todo {
+  margin: 20px 0px;
+  text-align: center;
+}
+
+.new-todo input {
+  padding: 10px 20px;
+  border-radius: 10px;
+  border-width: 1px;
+  min-width: 300px;
+  outline: 0;
+  background-color: lightgrey;
+}
+
+.mybtn {
+  padding: 10px 20px;
+  border-radius: 10px;
+  border-width: 1px;
+  margin-left: 15px;
+  background-color: lightgrey;
+  cursor: pointer;
 }
 
 .todo-list ul li,
